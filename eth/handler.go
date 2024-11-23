@@ -236,10 +236,10 @@ func newHandler(config *handlerConfig) (*handler, error) {
 		// accept each others' blocks until a restart. Unfortunately we haven't figured
 		// out a way yet where nodes can decide unilaterally whether the network is new
 		// or not. This should be fixed if we figure out a solution.
-		if !h.synced.Load() {
-			log.Warn("Syncing, discarded propagated block", "number", blocks[0].Number(), "hash", blocks[0].Hash())
-			return 0, nil
-		}
+		//if !h.synced.Load() {
+		//	log.Warn("Syncing, discarded propagated block", "number", blocks[0].Number(), "hash", blocks[0].Hash())
+		//	return 0, nil
+		//}
 		if h.merger.TDDReached() {
 			// The blocks from the p2p network is regarded as untrusted
 			// after the transition. In theory block gossip should be disabled

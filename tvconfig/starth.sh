@@ -1,5 +1,5 @@
-nohup ./geth --identity sv --datadir=./data --syncmode 'full' --port 30303  --http --http.api 'web3,eth,net,debug,personal' --http.port 8545 --authrpc.port 8551 --gcmode archive --snapshot  >miner1.log 2>&1 &
-nohup ./geth --identity sv --datadir=./data --syncmode 'full' --port 30304 --http --http.api 'web3,eth,net,debug,personal' --http.port 8546 --authrpc.port 8552 --gcmode archive --snapshot  >miner2.log 2>&1 &
+nohup ./geth --identity sv --datadir=./data --syncmode 'full' --port 30303  --http --http.api 'web3,eth,net,debug,personal' --http.port 8545 --authrpc.port 8551 --gcmode archive  >miner1.log 2>&1 &
+nohup ./geth --identity sv --datadir=./data --syncmode 'full' --port 30304 --http --http.api 'web3,eth,net,debug,personal' --http.port 8546 --authrpc.port 8552 --gcmode archive >miner2.log 2>&1 &
 
 nohup ./geth --identity tengo --datadir=./node1 --syncmode 'full' --port 30303  --http --http.api 'web3,eth,net,debug,personal' --http.port 8545 --allow-insecure-unlock --gcmode archive --snapshot  >miner1.log 2>&1 &
 nohup ./geth --identity tengo --datadir=./node1 --syncmode 'full' --verbosity 5 --port 30303  --http --http.api 'web3,eth,net,debug,personal' --http.port 8545 --allow-insecure-unlock --gcmode archive --snapshot  >miner1.log 2>&1 &
